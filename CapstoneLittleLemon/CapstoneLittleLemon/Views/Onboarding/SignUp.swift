@@ -125,12 +125,11 @@ struct SignUp: View {
             .padding(.horizontal, 50)
             .padding(.bottom, 50)
 
-            
-            .onAppear() {
-                if UserDefaults.standard.bool(forKey: kIsLoggedIn) {
-                    isLoggedIn = true
-                    
-                }
+        }
+        .onAppear() {
+            if UserDefaults.standard.bool(forKey: kIsLoggedIn) {
+                isLoggedIn = true
+                
             }
         }
         .navigationBarBackButtonHidden(true)
