@@ -19,7 +19,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 15) {
-                NavigationLink(destination: Menu(), isActive: $isLoggedIn) {}
+                NavigationLink(destination: Home(), isActive: $isLoggedIn) {}
                 .navigationBarBackButtonHidden(true)
                 
                 Spacer()

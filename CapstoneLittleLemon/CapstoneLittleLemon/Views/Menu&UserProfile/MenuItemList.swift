@@ -13,17 +13,6 @@ struct MenuItemList: View {
     
     let dish: Dish
     
-//        func buildSortDescriptors() -> [NSSortDescriptor] {
-//            return [NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare))]
-//        }
-//    
-//        func buildPredicate() -> NSPredicate {
-//            if searchText.isEmpty {
-//                return NSPredicate(value: true)
-//            } else {
-//                return NSPredicate(format: "title CONTAINS [cd] %@", searchText)
-//            }
-//        }
     
     var body: some View {
         VStack {
@@ -43,6 +32,7 @@ struct MenuItemList: View {
                 .foregroundStyle(.primaryBlack)
                 
                 Spacer()
+                
                 // Dish image
                 AsyncImage(url: URL(string: dish.image!)) { image in
                     image.resizable()

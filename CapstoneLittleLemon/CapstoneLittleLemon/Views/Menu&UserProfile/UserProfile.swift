@@ -11,7 +11,6 @@ struct UserProfile: View {
     @Environment(\.presentationMode) var presentation
     
     @StateObject private var viewModel = ViewModel()
-    
 
     @State private var accountChanges = false
     @State private var orderStatuses = false
@@ -28,10 +27,8 @@ struct UserProfile: View {
     
     
     
-    
-    
     var body: some View {
-        NavigationLink(destination: StartView().navigationBarBackButtonHidden(true), isActive: $isLoggedOut) {}
+        NavigationLink(destination: StartView().navigationBarBackButtonHidden(true), isActive: $isLoggedOut) {EmptyView()}
         
         VStack {
             
