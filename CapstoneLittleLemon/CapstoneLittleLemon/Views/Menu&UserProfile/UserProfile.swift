@@ -28,11 +28,12 @@ struct UserProfile: View {
     
     
     var body: some View {
-        NavigationLink(destination: StartView().navigationBarBackButtonHidden(true), isActive: $isLoggedOut) {}
         
         
         VStack {
-            
+            NavigationLink(destination: StartView().navigationBarBackButtonHidden(true), isActive: $isLoggedOut) {}
+                .hidden()
+
             Header(backButtonEnabled: true)
             
             Divider()

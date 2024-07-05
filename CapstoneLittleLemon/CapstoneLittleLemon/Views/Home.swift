@@ -20,7 +20,10 @@ struct Home: View {
             UserProfile()
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
+                    
                 }
+
+
         }
         .navigationBarBackButtonHidden(true)
     }
