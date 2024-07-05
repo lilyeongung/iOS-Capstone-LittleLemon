@@ -34,6 +34,7 @@
 		E16637122C36966F00856DC5 /* LemonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16637112C36966F00856DC5 /* LemonIcon.swift */; };
 		E166371B2C379C4600856DC5 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166371A2C379C4500856DC5 /* StartView.swift */; };
 		E166371D2C379C5C00856DC5 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166371C2C379C5C00856DC5 /* DishView.swift */; };
+		E16637222C37C25B00856DC5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16637212C37C25B00856DC5 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		E16637112C36966F00856DC5 /* LemonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonIcon.swift; sourceTree = "<group>"; };
 		E166371A2C379C4500856DC5 /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		E166371C2C379C5C00856DC5 /* DishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
+		E16637212C37C25B00856DC5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 		E16637172C37951600856DC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E16637212C37C25B00856DC5 /* Home.swift */,
 				E16637162C37920100856DC5 /* Onboarding */,
 				E16637152C3791E200856DC5 /* Menu&UserProfile */,
 			);
@@ -396,6 +399,7 @@
 				E166370E2C367DED00856DC5 /* UserProfile.swift in Sources */,
 				E166371B2C379C4600856DC5 /* StartView.swift in Sources */,
 				E14AE6992C36596E003AC40D /* Header.swift in Sources */,
+				E16637222C37C25B00856DC5 /* Home.swift in Sources */,
 				E14AE6952C365238003AC40D /* Menu.swift in Sources */,
 				E14AE6562C35C5FD003AC40D /* FetchedObjects.swift in Sources */,
 				E14AE6782C35D1AD003AC40D /* LoginView.swift in Sources */,
