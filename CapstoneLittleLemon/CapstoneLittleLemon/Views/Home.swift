@@ -19,7 +19,7 @@ struct Home: View {
             // Additional tabs can be added here
             UserProfile()
                 .tabItem {
-                    Label("Profile", systemImage: "list.dash")
+                    Label("Profile", systemImage: "person.crop.circle")
                 }
         }
         .navigationBarBackButtonHidden(true)

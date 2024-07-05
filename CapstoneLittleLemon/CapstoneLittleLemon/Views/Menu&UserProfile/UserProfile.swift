@@ -11,7 +11,7 @@ struct UserProfile: View {
     @Environment(\.presentationMode) var presentation
     
     @StateObject private var viewModel = ViewModel()
-
+    
     @State private var accountChanges = false
     @State private var orderStatuses = false
     @State private var specialOffers = false
@@ -28,7 +28,8 @@ struct UserProfile: View {
     
     
     var body: some View {
-        NavigationLink(destination: StartView().navigationBarBackButtonHidden(true), isActive: $isLoggedOut) {EmptyView()}
+        NavigationLink(destination: StartView().navigationBarBackButtonHidden(true), isActive: $isLoggedOut) {}
+        
         
         VStack {
             
@@ -70,14 +71,14 @@ struct UserProfile: View {
                         // TODO: - Implement Image upload
                         HStack(spacing: -15) {
                             Button("Change") {}
-                            .font(.leadText())
-                            .buttonStyle(SecondaryButtonStyle())
+                                .font(.leadText())
+                                .buttonStyle(SecondaryButtonStyle())
                             
                             Button("Remove") {}
                                 .font(.leadText())
                                 .buttonStyle(ThirdButtonStyle())
                             
-                           
+                            
                         }
                         .padding(.bottom, -20)
                         
@@ -162,6 +163,7 @@ struct UserProfile: View {
                     UserDefaults.standard.set(false, forKey: kOrderStatuses)
                     UserDefaults.standard.set(false, forKey: kSpecialOffers)
                     UserDefaults.standard.set(false, forKey: kNewsletter)
+                    
                     isLoggedOut = true
                     
                 }
@@ -169,24 +171,24 @@ struct UserProfile: View {
                 
                 
                 HStack(spacing: 4) {
-                
                     
                     
-                                        Button("Discard change") {
-                                            firstName = viewModel.firstName
-                                            lastName = viewModel.lastName
-                                            email = viewModel.email
-                                            password = viewModel.password
-                                            
-                                            accountChanges = viewModel.accountChanges
-                                            orderStatuses = viewModel.orderStatuses
-                                            specialOffers = viewModel.specialOffers
-                                            newsletter = viewModel.newsletter
-                                            
-                                            self.presentation.wrappedValue.dismiss()
-                                        }
-                                        .font(.leadText())
-                                        .buttonStyle(ThirdButtonStyle())
+                    
+                    Button("Discard change") {
+                        firstName = viewModel.firstName
+                        lastName = viewModel.lastName
+                        email = viewModel.email
+                        password = viewModel.password
+                        
+                        accountChanges = viewModel.accountChanges
+                        orderStatuses = viewModel.orderStatuses
+                        specialOffers = viewModel.specialOffers
+                        newsletter = viewModel.newsletter
+                        
+                        self.presentation.wrappedValue.dismiss()
+                    }
+                    .font(.leadText())
+                    .buttonStyle(ThirdButtonStyle())
                     
                     Button("Save change") {
                         if viewModel.validateUserInput(firstName: firstName, lastName: lastName, email: email, password: password) {
@@ -223,42 +225,6 @@ struct UserProfile: View {
             newsletter = viewModel.newsletter
         }
         
-        
-        
-        //        List{
-        //            Button("\( Image(systemName: "creditcard")) Payment methods"){
-        //
-        //            }
-        //            .listRowSeparator(.hidden)
-        //            .padding([.top, .bottom], 8)
-        //            Button("\( Image(systemName: "tag")) Promo code"){
-        //
-        //            }
-        //            .listRowSeparator(.hidden)
-        //            .padding([.top, .bottom], 8)
-        //            Button("\( Image(systemName: "gearshape")) Settings"){
-        //
-        //            }
-        //            .listRowSeparator(.hidden)
-        //            .padding([.top, .bottom], 8)
-        //            Button("\( Image(systemName: "info.circle")) About us"){
-        //
-        //            }
-        //            .listRowSeparator(.hidden)
-        //            .padding([.top, .bottom], 8)
-        //            Button("\( Image(systemName: "questionmark.circle")) Support"){
-        //
-        //            }
-        //            .listRowSeparator(.hidden)
-        //            .padding([.top, .bottom], 8)
-        //
-        //            Button("\(Image(systemName: "person.crop.circle.badge.xmark")) Account deletion") {
-        //                //                    showAlert = true
-        //            }
-        //        }
-        //        .listRowSeparator(.hidden)
-        //        .foregroundColor(.red)
-        //        .padding([.top, .bottom], 8)
     }
 }
 
